@@ -50,8 +50,15 @@ fish_year2
 
 # Population structure in year 3 ----
 fish_year3 <- fish_leslie %*% fish_year2
-fish_year3
+fish_year3 
+
+x <- fish_leslie %*% fish_year3
+for (i in 1:3){
+  cat("Here is fish year #", 3+i, "\n", x , "\n")
+  x <- fish_leslie %*% x
+}
 
 ## ADD YOUR CODE TO PROJECT FOR YEARS 4, 5 & 6 HERE ----
 ```
+
 
